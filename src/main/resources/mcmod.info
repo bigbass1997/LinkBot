@@ -1,0 +1,16 @@
+[
+{
+  "modid": "LinkBot",
+  "name": "LinkBot",
+  "description": "Links ingame chat to an IRC channel.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["bigbass1997"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

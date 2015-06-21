@@ -1,0 +1,33 @@
+{
+	"mysql": {
+		"hostname": "hostname.com",
+		"database": "database_name",
+		"dbTable": "db_overview",
+		"port": 3306,
+		"username": "root",
+		"password": "toor"
+	},
+	
+	"locale": {
+		"events": {
+			"BlockBreakEvent": "BlockBreak",
+			"BlockPlaceEvent": "BlockPlace",
+			"ServerChatEvent": "ServerChat",
+			"CommandEvent": "Command",
+			"PlayerLoggedInEvent": "PlayerLoggedIn",
+			"InventoryOpenedEvent": "InventoryOpened"
+		}
+	},
+    
+    "filter": {
+        "eventName": [],
+        "displayName": [],
+        "worldID": [],
+        "posX": [],
+        "posY": [],
+        "posZ": [],
+        "description": []
+    },
+	
+	"debug": false
+}
