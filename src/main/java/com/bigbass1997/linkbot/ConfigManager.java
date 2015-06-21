@@ -6,7 +6,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Hashtable;
 
 import org.apache.commons.io.FileUtils;
 
@@ -18,11 +17,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class ConfigManager {
 	
-	public static String hostname, database, username, password, dbTable;
-	public static int port;
 	public static boolean debug;
-	
-	public static Hashtable<String, String> eventNames;
 
 	public static String configJsonPath;
 	public static JsonObject configJson;
@@ -38,6 +33,7 @@ public class ConfigManager {
 		configJson = new JsonParser().parse(readFile(configJsonPath)).getAsJsonObject();
 		
 		//--
+		
 		
 		//--
 		
