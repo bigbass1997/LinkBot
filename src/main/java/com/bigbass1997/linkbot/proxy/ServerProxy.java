@@ -1,6 +1,7 @@
 package com.bigbass1997.linkbot.proxy;
 
 import com.bigbass1997.linkbot.ConfigManager;
+
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class ServerProxy extends CommonProxy {
