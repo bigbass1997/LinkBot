@@ -1,13 +1,18 @@
 {
 	"irc": {
         "botName": "LinkBot",
-        "ircServerHostName": "irc.esper.net"
+        "ircServerHostName": "irc.esper.net",
         "ircServerPort": 6667,
         "ircChannels": [
             "#ChannelOne",
             "#ChannelTwo"
         ]
     },
+    
+    "botPrefix": "[",
+    "botSuffix": "]",
+    "ircMessagePrefix": "[",
+    "ircMessageSuffix": "] ",
     
 	"debug": false
 }

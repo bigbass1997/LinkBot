@@ -22,6 +22,7 @@ public class ConfigManager {
 	public static String botName, ircServerHostName;
 	public static int ircServerPort;
 	public static ArrayList<String> ircChannels;
+	public static String ircMessagePrefix, ircMessageSuffix, botPrefix, botSuffix;
 	
 	public static boolean debug;
 
@@ -52,6 +53,13 @@ public class ConfigManager {
 		
 		//--
 		
+		ircMessagePrefix = configJson.get("ircMessagePrefix").getAsString();
+		ircMessageSuffix = configJson.get("ircMessageSuffix").getAsString();
+		botPrefix = configJson.get("botPrefix").getAsString();
+		botSuffix = configJson.get("botSuffix").getAsString();
+		
+		//--
+		
 		debug = configJson.get("debug").getAsBoolean();
 	}
 	
@@ -69,6 +77,13 @@ public class ConfigManager {
 		for(JsonElement channel : irc.get("ircChannels").getAsJsonArray()){
 			ircChannels.add(channel.getAsString());
 		}
+		
+		//--
+		
+		ircMessagePrefix = configJson.get("ircMessagePrefix").getAsString();
+		ircMessageSuffix = configJson.get("ircMessageSuffix").getAsString();
+		botPrefix = configJson.get("botPrefix").getAsString();
+		botSuffix = configJson.get("botSuffix").getAsString();
 		
 		//--
 		

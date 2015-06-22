@@ -1,7 +1,5 @@
 package com.bigbass1997.linkbot.irclisteners;
 
-import java.util.ArrayList;
-
 import com.bigbass1997.linkbot.ConfigManager;
 
 import jerklib.events.IRCEvent;
@@ -15,8 +13,7 @@ public class IRCConnectionListener implements IRCEventListener {
 		Type type = e.getType();
 		
 		if(type == Type.CONNECT_COMPLETE){
-			ArrayList<String> channels = ConfigManager.ircChannels;
-			for(String channel : channels){
+			for(String channel : ConfigManager.ircChannels){
 				e.getSession().join(channel);
 			}
 		}
