@@ -6,12 +6,9 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-
 import org.apache.commons.io.FileUtils;
 
 import com.bigbass1997.linkbot.util.Util;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
@@ -19,9 +16,8 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class ConfigManager {
 	
-	public static String botName, ircServerHostName;
+	public static String botName, ircServerHostName, ircChannel;
 	public static int ircServerPort;
-	public static ArrayList<String> ircChannels;
 	public static String ircMessagePrefix, ircMessageSuffix, botPrefix, botSuffix;
 	
 	public static boolean debug;
@@ -45,11 +41,7 @@ public class ConfigManager {
 		botName = irc.get("botName").getAsString();
 		ircServerHostName = irc.get("ircServerHostName").getAsString();
 		ircServerPort = irc.get("ircServerPort").getAsInt();
-		
-		ircChannels = new ArrayList<String>();
-		for(JsonElement channel : irc.get("ircChannels").getAsJsonArray()){
-			ircChannels.add(channel.getAsString());
-		}
+		ircChannel = irc.get("ircChannel").getAsString();
 		
 		//--
 		
@@ -72,11 +64,7 @@ public class ConfigManager {
 		botName = irc.get("botName").getAsString();
 		ircServerHostName = irc.get("ircServerHostName").getAsString();
 		ircServerPort = irc.get("ircServerPort").getAsInt();
-		
-		ircChannels = new ArrayList<String>();
-		for(JsonElement channel : irc.get("ircChannels").getAsJsonArray()){
-			ircChannels.add(channel.getAsString());
-		}
+		ircChannel = irc.get("ircChannel").getAsString();
 		
 		//--
 		

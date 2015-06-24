@@ -3,10 +3,7 @@
         "botName": "LinkBot",
         "ircServerHostName": "irc.esper.net",
         "ircServerPort": 6667,
-        "ircChannels": [
-            "#ChannelOne",
-            "#ChannelTwo"
-        ]
+        "ircChannel": "#ChannelOne"
     },
     
     "botPrefix": "[",

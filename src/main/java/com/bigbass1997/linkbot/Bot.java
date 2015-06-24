@@ -1,5 +1,7 @@
 package com.bigbass1997.linkbot;
 
+import java.util.List;
+
 import jerklib.Channel;
 import jerklib.ConnectionManager;
 import jerklib.Profile;
@@ -30,5 +32,9 @@ public class Bot {
 		for(Channel channel : session.getChannels()){
 			session.sayChannel(channel, s);
 		}
+	}
+	
+	public List<String> getUserList(String channelName){
+		return session.getChannel(channelName).getNicks();
 	}
 }

@@ -13,9 +13,7 @@ public class IRCConnectionListener implements IRCEventListener {
 		Type type = e.getType();
 		
 		if(type == Type.CONNECT_COMPLETE){
-			for(String channel : ConfigManager.ircChannels){
-				e.getSession().join(channel);
-			}
+			e.getSession().join(ConfigManager.ircChannel);
 		}
 	}
 }
